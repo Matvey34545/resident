@@ -4,7 +4,7 @@
 FrameStyle              db 0dah, 0c4h, 0bfh, 0b3h, 20h, 0b3h, 0c0h, 0c4h, 0d9h
 LenghtScreen            dw 160
 SizeStrStyle            dw 3
-Coordinates             dw 4301h
+Coordinates             dw 4301h                                    ;!!!
 LenghtFrame             dw 11
 HeightFrame             dw 12
 IndentationFrame        dw 3
@@ -21,7 +21,8 @@ NameBp                  db 'bp'
 NameSp                  db 'sp'
 NameDs                  db 'ds'
 NameEs                  db 'es'
-NameSs                  db 'ss'
+NameSs                  db 'stack_seq'
+NameSsLen               equ $-NameSs    
 NameCs                  db 'cs'
 
 ArrayNameRegister       dw 2, offset NameAx   ;{size_name_register, name_register}
